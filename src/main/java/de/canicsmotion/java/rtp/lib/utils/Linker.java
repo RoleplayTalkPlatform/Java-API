@@ -1,5 +1,7 @@
 package de.canicsmotion.java.rtp.lib.utils;
 
+import de.canicsmotion.java.rtp.lib.handler.RESTHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -9,6 +11,7 @@ import java.util.TimerTask;
  * The Linker updates all players and sends them to the Backend of RTP
  */
 public class Linker {
+    private RESTHandler restHandler;
     private Timer updateTimer = new Timer();
     private UpdateTask updateTask;
     private List<Player> players = new ArrayList<>();
@@ -40,7 +43,8 @@ public class Linker {
      * @param port defines the port of the Backend
      */
     private void connect(String ip, int port) {
-        //TODO: connect to Backend
+        restHandler = new RESTHandler(ip, port);
+        restHandler.connect();
         connected = true;
     }
 
@@ -48,7 +52,7 @@ public class Linker {
      * disconnects the Linker from the Backend
      */
     private void disconnect() {
-        //TODO: disconnect from the Backend
+        restHandler.disconnect();
         connected = false;
     }
 
@@ -58,16 +62,15 @@ public class Linker {
      * @param updateRate defines in milliseconds how often an Update should be made
      */
     public void start(int updateRate) {
-        if (updateTask != null) {
-            if (updateRate > 10) {
-                updateTimer.scheduleAtFixedRate(new TimerTask() {
-                    @Override
-                    public void run() {
-                        updateTask.updatePlayers();
-                        sendPlayersToBackend();
-                    }
-                }, 0, updateRate);
-            }
+        if (updateTask != null && connected && updateRate > 10) {
+            updateTimer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    updateTask.updatePlayers();
+                    sendPlayersToBackend();
+                }
+            }, 0, updateRate);
+
         }
     }
 
@@ -83,7 +86,7 @@ public class Linker {
      * sends the locations of all players to the backend
      */
     private void sendPlayersToBackend() {
-        //TODO: Send Players to Backend
+        restHandler.sendPlayers(players);
     }
 
     /**
