@@ -33,8 +33,7 @@ You can create a Linker like this:
     linker = new Linker(ip, port);
     linker.setUpdateTask(() -> {
         for (Player player : getOnlinePlayers()) {
-            de.canicsmotion.java.rtp.lib.utils.Player parsedPlayer = parsePlayer(player);
-            linker.updatePlayer(parsedPlayer);
+            linker.updatePlayer(parsePlayer(player));
         }
     });
     
