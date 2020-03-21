@@ -1,7 +1,7 @@
 # RoleplayTalkPlatform Java Library
 ## Overview
-##### [Getting started](https://github.com/RoleplayTalkPlatform/Java-Library/tree/develop#getting-started-1)
-##### [Others](https://github.com/RoleplayTalkPlatform/Java-Library/tree/develop#others-1)
+##### [Getting started](#getting-started-1)
+##### [Others](#others-1)
 
 ## Getting started
 We highly recommend to create a method to parse the Player of your Game to a Player of this Library and the same for the position(Coordinate).
