@@ -66,4 +66,12 @@ public class Coordinate {
     public void setZ(double z) {
         this.z = z;
     }
+
+    /**
+     * @return the coordinate as String
+     */
+    @Override
+    public String toString() {
+        return String.format("X:%.1f Y:%.1f Z%.1f", x, y, z);
+    }
 }

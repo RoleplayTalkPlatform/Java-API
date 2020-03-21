@@ -12,7 +12,7 @@ It could look like this:
             player.getDisplayName()
         );
         parsedPlayer.setPosition(parsePosition(player.getPosition()));
-        retrun parsedPlayer;
+        return parsedPlayer;
     }
     
     public de.canicsmotion.java.rtp.lib.utils.Coordinate parsePosition(some.game.Position position){
