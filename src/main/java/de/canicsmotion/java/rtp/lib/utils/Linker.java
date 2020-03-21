@@ -59,7 +59,7 @@ public class Linker {
      */
     public void start(int updateRate) {
         if (updateTask != null) {
-            if (updateRate > 50) {
+            if (updateRate > 10) {
                 updateTimer.scheduleAtFixedRate(new TimerTask() {
                     @Override
                     public void run() {

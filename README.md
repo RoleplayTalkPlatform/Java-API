@@ -42,7 +42,7 @@ To start the linker and update all players frequently you should use:
 
     linker.start(200);
     
-In this case you will provide all Player Data every 200 milliseconds. The minimum is 50ms.
+In this case you will provide all Player Data every 200 milliseconds. The minimum is 10 ms.
 
 To stop the Linker again you have to use:
     
