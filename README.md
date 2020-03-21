@@ -1,6 +1,6 @@
-#RoleplayTalkPlatform Java Library
+# RoleplayTalkPlatform Java Library
 
-##Getting started
+## Getting started
 We highly recommend to create a method to parse the Player of your Game to a Player of this API and the same for the position(Coordinate).
 
 It could look like this:
