@@ -52,7 +52,7 @@ To start the linker and update all players frequently you should use:
 
     linker.start(20);
     
-In this case you will provide all Player Data every 200 milliseconds. The minimum is 10 ms. 
+In this case you will provide all Player Data every 20 milliseconds. The minimum is 10 ms. 
 > If your server is running very slow or you don't have enough RAM accessable, you can turn this number up, but recommendet is about 20 to 50 ms. Than higher this number is, then viewer updates will be done, so if you only have n update every 500ms, it will not sound authentic.
 
 To stop the Linker again you have to use:
