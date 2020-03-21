@@ -5,9 +5,9 @@ We highly recommend to create a method to parse the Player of your Game to a Pla
 
 It could look like this:
 
-    public de.canicsmotion.java.rtp.api.utils.Player parsePlayer(some.game.Player player){
-        de.canicsmotion.java.rtp.api.utils.Player parsedPlayer;
-        parsedPlayer = new de.canicsmotion.java.rtp.api.utils.Player(
+    public de.canicsmotion.java.rtp.lib.utils.Player parsePlayer(some.game.Player player){
+        de.canicsmotion.java.rtp.lib.utils.Player parsedPlayer;
+        parsedPlayer = new de.canicsmotion.java.rtp.lib.utils.Player(
             player.getIP().toString(),
             player.getDisplayName()
         );
@@ -15,9 +15,9 @@ It could look like this:
         retrun parsedPlayer;
     }
     
-    public de.canicsmotion.java.rtp.api.utils.Coordinate parsePosition(some.game.Position position){
-        de.canicsmotion.java.rtp.api.utils.Coordinate parsedPosition;
-        parsedPosition = new de.canicsmotion.java.rtp.api.utils.Coordinate(
+    public de.canicsmotion.java.rtp.lib.utils.Coordinate parsePosition(some.game.Position position){
+        de.canicsmotion.java.rtp.lib.utils.Coordinate parsedPosition;
+        parsedPosition = new de.canicsmotion.java.rtp.lib.utils.Coordinate(
             position.getX(),
             position.getY(),
             position.getZ()

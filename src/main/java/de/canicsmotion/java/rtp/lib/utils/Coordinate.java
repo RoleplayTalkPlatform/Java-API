@@ -1,4 +1,4 @@
-package de.canicsmotion.java.rtp.api.utils;
+package de.canicsmotion.java.rtp.lib.utils;
 
 /**
  * @Coordinate is an Object that basically represents the in-game Position of a Player

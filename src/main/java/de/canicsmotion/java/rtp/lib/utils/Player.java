@@ -1,4 +1,4 @@
-package de.canicsmotion.java.rtp.api.utils;
+package de.canicsmotion.java.rtp.lib.utils;
 
 /**
  * The Player-Object contains all the player-data.
